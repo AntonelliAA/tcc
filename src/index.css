@@ -5,6 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(45deg, purple, green);
+  background-repeat: no-repeat;
+  background-size: cover; /* Adiciona o background-size: cover */
+  background-position: center;
+  height: 100vh;
 }
 
 code {
