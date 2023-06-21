@@ -1,0 +1,23 @@
+.divExercicios {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.listaExercicios {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, 10rem);
+    gap: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    border: 2px solid black;
+  }
+}

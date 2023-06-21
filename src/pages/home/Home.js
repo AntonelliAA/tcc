@@ -14,29 +14,26 @@ const Home = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    setIdade(parseInt(idade))
-    setAltura(parseFloat(altura))
-    setPeso(parseFloat(peso))
-
-    
+  
+    const data = {
+      nome: nome,
+      email: email,
+      idade: parseInt(idade),
+      altura: parseFloat(altura),
+      peso: parseFloat(peso),
+      senha: senha
+    };
+  
     try {
-      const response = await axios.post('http://localhost:3333/cadastro', {
-        nome,
-        email,
-        idade,
-        altura,
-        peso,
-        senha
-      });
-      
+      const response = await axios.post('http://localhost:3333/cadastro', data);
       console.log('Resposta da API:', response.data);
-      localStorage.setItem("id_usuario",response.data.id_usuario)
-      navigate("/inicio")
+      localStorage.setItem("id_usuario", response.data.id_usuario);
+      navigate("/login");
     } catch (error) {
       console.error(error);
     }
   };
+  
 
   return (
     <div className='home'>

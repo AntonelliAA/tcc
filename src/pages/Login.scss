@@ -3,46 +3,45 @@
   background-repeat: no-repeat;
   background-size: cover; /* Adiciona o background-size: cover */
   background-position: center;
-    color: #ffffff;
-    padding: 20px;
+  color: #ffffff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  
-    h1 {
-      font-size: 24px;
-      margin-bottom: 16px;
+    margin-bottom: 16px;
+
+    input {
+      padding: 8px;
+      margin-bottom: 8px;
     }
-  
-    form {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 16px;
-  
-      input {
-        padding: 8px;
-        margin-bottom: 8px;
-      }
-  
-      button {
-        padding: 8px;
-        background-color: #ffffff;
-        color: #1c1c1c;
-        border: none;
-        cursor: pointer;
-      }
-    }
-  
-    a {
-      color: #ffffff;
-      text-decoration: underline;
-      margin-top: 16px;
-  
-      &:hover {
-        color: #ffffff;
-      }
+
+    button {
+      padding: 8px;
+      background-color: #ffffff;
+      color: #1c1c1c;
+      border: none;
+      cursor: pointer;
     }
   }
-  
+
+  a {
+    color: #ffffff;
+    text-decoration: underline;
+    margin-top: 16px;
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+}
