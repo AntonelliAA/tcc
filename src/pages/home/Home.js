@@ -18,14 +18,14 @@ const Home = () => {
     const data = {
       nome: nome,
       email: email,
-      idade: parseInt(idade),
-      altura: parseFloat(altura),
-      peso: parseFloat(peso),
+      idade: Number(idade),
+      altura: Number(altura),
+      peso: Number(peso),
       senha: senha
     };
   
     try {
-      const response = await axios.post('http://localhost:3333/cadastro', data);
+      const response = await axios.post('https://tcc-qs1j.onrender.com/cadastro', data);
       console.log('Resposta da API:', response.data);
       localStorage.setItem("id_usuario", response.data.id_usuario);
       navigate("/login");

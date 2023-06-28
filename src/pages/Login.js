@@ -20,7 +20,7 @@ const Login = () => {
     event.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:3333/login', {
+      const response = await axios.post('https://tcc-qs1j.onrender.com/login', {
         email,
         senha,
       });

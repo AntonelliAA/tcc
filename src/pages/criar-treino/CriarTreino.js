@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./CriarTreino.scss";
 
+
 const CriarTreino = () => {
   const [nomeTreino, setNomeTreino] = useState("");
+  const navigate = useNavigate();
 
   const handleNomeTreinoChange = (event) => {
     setNomeTreino(event.target.value);
@@ -26,8 +28,10 @@ const CriarTreino = () => {
         id_usuario: Number(id_usuario),
       };
 
-      const response = await axios.post("http://localhost:3333/treinos", data);
+      const response = await axios.post("https://tcc-qs1j.onrender.com/treinos", data);
       console.log(response.data);
+      navigate("/inicio")
+      
     } catch (error) {
       console.error(error);
     }

@@ -19,5 +19,17 @@
     padding-bottom: 15px;
 
     border: 2px solid black;
+
+    li{
+      display: grid;
+
+      button{
+        margin-top: 10px;
+        width: 50%;
+      }
+    }
   }
+
 }
+
+
